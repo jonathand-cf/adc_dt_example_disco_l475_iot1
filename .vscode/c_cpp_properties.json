@@ -5,18 +5,18 @@
             "includePath": [
                 "${workspaceFolder}/build/zephyr/include/generated",
                 "${workspaceFolder}/**",
-                "~/zephyrproject/zephyr/include",
-                "~/zephyrproject/zephyr/include/zephyr",
-                "~/zephyrproject/zephyr/lib/libc/common/include",
-                "~/zephyrproject/zephyr/lib/libc/minimal/include",
+                "${workspaceFolder}/../zephyr/include",
+                "${workspaceFolder}/../zephyr/include/zephyr",
+                "${workspaceFolder}/../zephyr/lib/libc/common/include",
+                "${workspaceFolder}/../zephyr/lib/libc/minimal/include",
                 "~/zephyr-sdk-0.17.4/arm-zephyr-eabi/arm-zephyr-eabi/include",
-                "~/zephyrproject/zephyr/soc/st/stm32/stm32f7x",
-                "~/zephyrproject/zephyr/soc/st/stm32/common",
-                "~/zephyrproject/zephyr/modules/cmsis",
-                "~/zephyrproject/zephyr/modules/cmsis_6",
-                "~/zephyrproject/modules/hal/stm32/stm32cube/stm32f7xx/soc",
-                "~/zephyrproject/modules/hal/stm32/stm32cube/stm32f7xx/drivers/include",
-                "~/zephyrproject/modules/hal/stm32/stm32cube/common_ll/include"
+                "${workspaceFolder}/../zephyr/soc/st/stm32/stm32f7x",
+                "${workspaceFolder}/../zephyr/soc/st/stm32/common",
+                "${workspaceFolder}/../zephyr/modules/cmsis",
+                "${workspaceFolder}/../zephyr/modules/cmsis_6",
+                "${workspaceFolder}/../modules/hal/stm32/stm32cube/stm32f7xx/soc",
+                "${workspaceFolder}/../modules/hal/stm32/stm32cube/stm32f7xx/drivers/include",
+                "${workspaceFolder}/../modules/hal/stm32/stm32cube/common_ll/include"
             ],
             "forcedInclude": [
                 "${workspaceFolder}/build/zephyr/include/generated/zephyr/autoconf.h"

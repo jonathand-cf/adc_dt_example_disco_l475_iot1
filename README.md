@@ -15,7 +15,22 @@ The [`main.c`](/src/main.c) reads ADC samples from one channel (see `boards/disc
 
 Recommended reading for the `src/main.c` example: [adc.h File Reference](https://docs.zephyrproject.org/latest/doxygen/html/drivers_2adc_8h.html)
 
-The pins of the ADC channels are board-specific. Please see [board pinout](https://os.mbed.com/platforms/ST-Discovery-L475E-IOT01A/#board-pinout) for ADC pinout range.
+The pins of the ADC channels are refrenced in the [board pinout](https://os.mbed.com/platforms/ST-Discovery-L475E-IOT01A/#board-pinout), each channel is defined as `ADC1/X` for each avalible pin. In our example the pin used is `A0` on channel `14`. You must define the channel to use as such:
+
+```json
+&adc1 {
+	#address-cells = <1>;
+	#size-cells = <0>;
+
+	channel@X {
+		reg = <X>;
+		zephyr,gain = "ADC_GAIN_1";
+		zephyr,reference = "ADC_REF_INTERNAL";
+		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
+		zephyr,resolution = <12>;
+	};
+};
+```
 
 ## Building and Running
 

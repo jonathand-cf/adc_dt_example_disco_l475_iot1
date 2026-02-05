@@ -9,7 +9,6 @@ static const struct adc_dt_spec adc_channel = ADC_DT_SPEC_GET(DT_PATH(zephyr_use
 
 int main(void)
 {
-	int err;
 	uint32_t count = 0;
 	uint16_t buf;
 	struct adc_sequence sequence = {
@@ -27,12 +26,7 @@ int main(void)
 		       adc_channel.channel_id);
 
 		(void)adc_sequence_init_dt(&adc_channel, &sequence);
-
-		err = adc_read_dt(&adc_channel, &sequence);
-		if (err < 0) {
-			printk("Could not read (%d)\n", err);
-			continue;
-		}
+		(void)adc_read_dt(&adc_channel, &sequence);
 
 		val_mv = (int32_t)buf;
 		printk("%"PRId32, val_mv);
