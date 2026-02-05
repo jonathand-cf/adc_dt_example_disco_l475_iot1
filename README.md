@@ -11,9 +11,9 @@
 
 This sample demonstrates how to use the [ADC driver API](https://docs.zephyrproject.org/latest/samples/drivers/adc/adc_dt/README.html).
 
-The [`main.c`](/src/main.c) reads ADC samples from one channel (see `boards/disco_l475_iot1.overlay`)
-and prints the readings on the console. If voltage of the used reference can
-be obtained, the raw readings are converted to millivolts.
+The [`main.c`](/src/main.c) reads ADC samples from one channel (see `boards/disco_l475_iot1.overlay`) and prints the readings on the console. If voltage of the used reference can be obtained, the raw readings are converted to millivolts.
+
+Recommended reading for the `src/main.c` example: [adc.h File Reference](https://docs.zephyrproject.org/latest/doxygen/html/drivers_2adc_8h.html)
 
 The pins of the ADC channels are board-specific. Please see [board pinout](https://os.mbed.com/platforms/ST-Discovery-L475E-IOT01A/#board-pinout) for ADC pinout range.
 

@@ -1,12 +1,7 @@
-/*
- * SPDX-License-Identifier: Apache-2.0
- *
- * Copyright (c) 2020 Linaro Limited
- */
 
 / {
 	zephyr,user {
-		/* adjust channel number according to pinmux in board.dts */
+		/* This defines ADC channel 5 (A0 on the Arduino connector) */
 		io-channels = <&adc1 5>;
 	};
 };
@@ -20,6 +15,5 @@
 		zephyr,gain = "ADC_GAIN_1";
 		zephyr,reference = "ADC_REF_INTERNAL";
 		zephyr,acquisition-time = <ADC_ACQ_TIME_DEFAULT>;
-		zephyr,resolution = <12>;
 	};
 };
